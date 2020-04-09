@@ -58,10 +58,10 @@ def main():
             os.symlink('/root/Tools', folder + '/Tools')
             os.symlink('/usr/share/wordlists', folder + '/wordlists')
             copyfile("linux-mapping.md", folder + '/linux-auditscript.md')
-            copyfile("windows-mapping.md", folder + '/windows-auditscript.md')
+            #copyfile("windows-mapping.md", folder + '/windows-auditscript.md')
             copyfile("init-scan.sh", folder + '/quick-scan.sh')
             inplace_change(folder + "/linux-auditscript.md","INSERTIPADDRESS",folder)
-            inplace_change(folder + "/windows-auditscript.md","INSERTIPADDRESS",folder)
+            #inplace_change(folder + "/windows-auditscript.md","INSERTIPADDRESS",folder)
             inplace_change(folder + "/quick-scan.sh","INSERTIPADDRESS",folder)
             os.chdir(folder)
          
